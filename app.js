@@ -13,24 +13,15 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use( express.static('public') );
 
 app.get('/', (request, response) =>{
-    response.render('home', {
-        nombre: 'Road trip',
-        porquien: 'Josthin Ayon'
-    });
+    response.render('home');
 });
 
 app.get('/generic', (request, response) =>{
-    response.render('generic', {
-        nombre: 'Road trip',
-        porquien: 'Josthin Ayon'
-    });
+    response.render('generic' );
 });
 
 app.get('/elements', (request, response) =>{
-    response.render('elements', {
-        nombre: 'Road trip',
-        porquien: 'Josthin Ayon'
-    });
+    response.render('elements');
 });
 
 app.get('*', (request, response) =>{
