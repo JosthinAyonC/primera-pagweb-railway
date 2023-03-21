@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../02-fundamentos"
+		},
+		{
+			"path": "../CLASES UG"
+		},
+		{
+			"path": "../03-bases"
+		},
+		{
+			"path": "../05-aplicacion-tareas"
+		},
+		{
+			"path": "../05-clima-app"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
