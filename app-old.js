@@ -1,22 +1,22 @@
 const http = require('http');
 
 
-http.createServer((request, response) => {
-    
-    // response.writeHeader('Content-Disposition' , 'attachment; filename=lista.csv' ); Para crear un tipo de documento de windows.
-    // response.writeHead(200, { 'Content-Type' : 'application/json' });
+http.createServer((req, res) => {
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+
+        let salida = {
+            nombre: 'Josthin',
+            edad: 32,
+            url: req.url
+        }
+
+        res.write(JSON.stringify(salida));
+        // res.write('Hola Mundo');
+        res.end();
+
+    })
+    .listen(8080);
 
 
-
-    const persona = {
-        id: 1,
-        nombre: 'Josthin',
-        edad: 21
-    }
-
-    response.write('JSON.(persona)');
-    response.end();
-
-}).listen( 8080 );
-
-console.log('Escuchando el puerto', 8080);
+console.log('Escuchando el puerto 8080');
