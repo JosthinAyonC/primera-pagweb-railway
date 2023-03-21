@@ -18,15 +18,19 @@ app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
 
-    res.render('home', {
-        nombre: 'Josthin'
-    });
+    res.render('home');
+});
+app.get('/generic', (req, res) => {
+
+    res.render('generic');
 });
 
-app.get('/about', (req, res) => {
+app.get('/elements', (req, res) => {
 
-    res.render('about');
+    res.render('elements');
 });
+
+
 
 app.listen(port, () => {
     console.log(`Escuchando peticiones en el puerto ${ port }`);
