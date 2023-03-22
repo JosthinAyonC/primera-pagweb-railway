@@ -1,7 +1,9 @@
 const express = require('express');
+const contacto = require ("./public/assets/js/contacto.js")
 const app = express();
 
 const hbs = require('hbs');
+const conection = require('./public/assets/js/mysql.js');
 require('./hbs/helpers');
 
 const port = process.env.PORT || 3000;
@@ -36,7 +38,14 @@ app.get('/retroalimentacion', (req, res) => {
 });
 
 
+conection.connect((err)=>{
+    if(err) throw err
 
-app.listen(port, () => {
+    console.log('Conexion establecida');
+    app.listen(port, () => {
     console.log(`Escuchando peticiones en el puerto ${ port }`);
+    });
+    
 });
+
+
