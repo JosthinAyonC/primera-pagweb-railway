@@ -20,14 +20,19 @@ app.get('/', (req, res) => {
 
     res.render('home');
 });
-app.get('/generic', (req, res) => {
+app.get('/about-me', (req, res) => {
 
-    res.render('generic');
+    res.render('about-me');
 });
 
 app.get('/elements', (req, res) => {
 
     res.render('elements');
+});
+
+app.get('/retroalimentacion', (req, res) => {
+
+    res.render('retroalimentacion');
 });
 
 
